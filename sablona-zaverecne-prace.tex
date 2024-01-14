@@ -4,8 +4,8 @@
 % Tato šablona byla vytvořena tak, aby pomocí ní mohli v systému LaTeX soutěžící sázet své práce a zároveň odpovídala požadavkům na formátování vyplývajícím z wordové šablony umístěné na webu soc.cz.
 %
 \documentclass[12pt, a4paper,
-%oneside,      %% -- odkomentujte, pokud chcete svou práci mít pouze jednostrannou, mezera pro hřbet pak automaticky bude pouze na levé straně
-twoside,        %% -- pro oboustranné práce, mezera pro hřbet následně střídá strany.
+oneside,      %% -- odkomentujte, pokud chcete svou práci mít pouze jednostrannou, mezera pro hřbet pak automaticky bude pouze na levé straně
+        %% -- pro oboustranné práce, mezera pro hřbet následně střídá strany.
 openright
 ]{report}
 
@@ -19,9 +19,17 @@ openright
 \newcommand\skola{Střední škola průmyslová a umělecká, Opava} %% vyplň název školy
 \newcommand\trida{IT4} %% vyplň jméno svého konzultanta
 \newcommand\jmenoAutora{Mai Anh Perinová}  %% vyplň své jméno
-\newcommand\skolniRok{2024/25} %% vyplň rok
+\newcommand\skolniRok{2023/24} %% vyplň rok
 \newcommand\datumOdevzdani{1. 1. 2024} %% vyplň rok
 \newcommand\nazevPrace{HaruDolore} %% vyplň název své práce
+
+% předefinování příkazu chapter
+\let\oldchapter\chapter
+\renewcommand{\chapter}{
+	\clearpage %Zajišťuje že nová kapitola začne na nové stránce
+	\pagestyle{plain} %Nastavuje styl stránky, který chcete používat
+	\oldchapter	
+}
 
 \title{\nazevPrace} %% -- Název tvé práce
 \author{\jmenoAutora} %% -- tvé jméno
@@ -55,7 +63,7 @@ openright
 \setlength{\cftbeforesecskip}{0pt}   % Menší rozestup pro sekce
 
 \setcounter{secnumdepth}{2}
-\setcounter{tocdepth}{1}
+\setcounter{tocdepth}{2}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0.025pt}
@@ -126,45 +134,6 @@ openright
 \definecolor{darkviolet}{rgb}{0.58, 0.0, 0.83}
 \definecolor{royalblue}{rgb}{0.25, 0.41, 0.88}
 \definecolor{crimson}{rgb}{0.86, 0.8, 0.24}
-
-% Nastavení pro Python
-\lstdefinestyle{Python}{
-	language=Python,
-	backgroundcolor=\color{white},
-	basicstyle=\ttfamily,
-	breakatwhitespace=false,
-	breaklines=false,
-	captionpos=b,
-	columns=fullflexible,
-	commentstyle=\color{mediumgray}\upshape,
-	emph={},
-	emphstyle=\color{crimson},
-	extendedchars=true,  % requires inputenc
-	fontadjust=true,
-	frame=single,
-	identifierstyle=\color{black},
-	keepspaces=true,
-	keywordstyle=\color{mediumblue},
-	keywordstyle={[2]\color{darkviolet}},
-	keywordstyle={[3]\color{royalblue}},
-	literate=%
-	{á}{{\'a}}1 {č}{{\v{c}}}1 {ď}{{\v{d}}}1 {é}{{\'e}}1 {ě}{{\v{e}}}1
-	{í}{{\'i}}1 {ň}{{\v{n}}}1 {ó}{{\'o}}1 {ř}{{\v{r}}}1 {š}{{\v{s}}}1
-	{ť}{{\v{t}}}1 {ú}{{\'u}}1 {ů}{{\r{u}}}1 {ý}{{\'y}}1 {ž}{{\v{z}}}1,		
-	numbers=left,
-	numbersep=5pt,
-	numberstyle=\tiny\color{black},
-	rulecolor=\color{black},
-	showlines=true,
-	showspaces=false,
-	showstringspaces=false,
-	showtabs=false,
-	stringstyle=\color{forestgreen},
-	tabsize=2,
-	title=\lstname,
-	upquote=true  % requires textcomp	
-}
-
 
 \lstdefinestyle{JSES6Base}{
 	backgroundcolor=\color{white},
@@ -251,7 +220,7 @@ openright
 		
 		\begin{figure}[h]
 			\centering
-			\includegraphics[width=0.8\linewidth]{image/programovani-02.jpg} 
+			\includegraphics[width=0.8\linewidth]{image/homepage.png} 
 		\end{figure}
 		
 		\vspace{0.02 \textheight}
@@ -299,7 +268,7 @@ openright
 %% Abstrakt v češtině
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\noindent{\Large{\bfseries{Abstrakt}\\}}
-	Výsledkem projektu je funkční webová aplikace pro ukládání souborů k určité maturitní otázce. Aplikace umožňuje přihlášení uživatele přes Email, Google, GitHub a Microsoft. Stránka obsahuje maturitní otázky, které jsou rozděleny do určitých kategorií a jsou přehledně zobrazeny. Uživatel si vybírá otázku ke které pak přidá výukový soubor. Soubory se ukládají ke každé otázce zvlášť a jsou k dispozici ke stáhnutí pro přihlášeného uživatele. Při nahrávání výukového matetirálu musí uživatel soubor zařadit do kategorie, která se pak zobrazuje jako štítek vedle nahraného souboru.
+	Výsledkem projektu je funkční webová aplikace pro ukládání souborů k určité maturitní otázce. Aplikace umožňuje přihlášení uživatele přes Email, Google, GitHub a Microsoft. Stránka obsahuje maturitní otázky, které jsou rozděleny do určitých kategorií a jsou přehledně zobrazeny. Uživatel si vybírá otázku ke které pak přidá výukový soubor. Soubory se ukládají ke každé otázce zvlášť a jsou k dispozici ke stažení pro přihlášeného uživatele. Každý uživatel vidí pouze své uložené soubory. Při nahrávání výukového matetirálu musí uživatel soubor zařadit do kategorie, která se pak zobrazuje jako štítek vedle nahraného souboru. Vedle štítku se pak nachází tlačítko, které umožňuje smazání souboru.
 	\\
 	
 	\vspace{18pt}
@@ -307,6 +276,21 @@ openright
 	\noindent{\large{\bfseries{Klíčová slova}}}
 	
 	\noindent webová stránka, databáze, uživatelské účty, soubory \dots 
+	
+	\vspace{20pt}
+	
+	%% Abstrakt v angličtině
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\noindent{\Large{\bfseries{Abstract}\\}}
+	The result of the project is a functional web application for storing files for a specific graduation question. The application allows user login via Email, Google, GitHub and Microsoft. The site contains graduation questions that are divided into specific categories and are clearly displayed. The user chooses a question to which they then add a educational file. The files are stored for each question separately and are available for download to the logged-in user. Each user can only see their own saved files. When uploading a educational material, the user must categorize the file, which is then displayed as a label next to the uploaded file. Next to the label, there is a button allowing the user to delete the file.
+	\\
+	
+	\vspace{18pt}
+	
+	\noindent{\large{\bfseries{Keywords}}}
+	
+	\noindent website, database, user accounts, files \dots
 	
 	\vspace{18pt}
 	
@@ -331,11 +315,7 @@ openright
 %První parametr toc označuje, že přidáváme záznam do Table of Contents (obsahu).
 %Druhý parametr chapter specifikuje úroveň záznamu. V tomto případě říkáme, že přidávaný záznam má být považován za kapitolu.
 %Třetí parametr Úvod je text, který se objeví v obsahu. V tomto případě bude v obsahu zobrazen název "Úvod".	
-Závěrečné studijní práce a jejich veřejné obhajoby jsou důležitou součástí vyvrcholení studia oboru informační technologie na \textit{Střední škole průmyslové a umělecké v Opavě}. Hlavním cílem je samostatně vypracovat komplexní, nejčastěji prakticky zaměřený projekt na vybrané téma z~oblasti ICT a napsat k tomuto projektu také příslušnou odbornou dokumentaci podle obecně platných pravidel. Nejúspěšnější studentské projekty bývají vybrány, aby školu reprezentovaly v soutěžních přehlídkách \emph{Středoškolské odborné činnosti} (dále SOČ), kde je pečlivá a přesná dokumentace rovněž vyžadována.
-
-Tento dokument vznikl se záměrem co nejvíce studentům usnadnit formální úpravu dokumentace k jejich odborné práci a poskytnout jim i dobré vodítko při strukturování samotného obsahu. Vzhledem k tomu, že příprava na vysokoškolské studium často vyžaduje znalost {\LaTeX}u, představujeme šablonu vytvořenou v této technologii, jejímž autorem je z velké části Jakub Dokulil a která byla původně určená pro soutěžící SOČ.  
-
-První kapitola této práce obsahuje základní informace o~{\LaTeX}u; stručně se zmiňuje o jeho vývoji, ale hlavně se soustředí na základní principy, které je nezbytné znát při sestavování rozsáhlejších  textových dokumentů. Součástí této kapitoly je i výběr některých programových prostředků, které mohou výrazněji urychlit a usnadnit psaní zdrojového kódu {\LaTeX}u. V kapitole nazvané "Jak psát odbornou dokumentaci" jsou zdůrazněna nejdůležitější pravidla, jež by měla být dodržena při psaní (nejen) odborného textu, a to jak zásady týkající se obsahu, tak i formální stránky - pravopisné, typografické apod. Závěrečná kapitola se soustředí na praktické ukázky správného použití různých typů obsahu v odborné práci. 
+Úvod
 
 %Tipy k psaní úvodu
 %Je povinný, nadpis neměňte, rozsah - max. 1 strana. 
@@ -345,156 +325,378 @@ První kapitola této práce obsahuje základní informace o~{\LaTeX}u; stručn�
 %* motivaci pro další čtení textu včetně stručného uvedení obsahu následujících kapitol 
 
 
-\chapter{Struktura aplikace}
-V této kapitole si popíšeme strukturu webové aplikace.
-\section{Frontend}
-\label{sec:frontend}
-
-
-\subsection{React Next.js}
-
-
-\subsection{Tailwind CSS}
-Hlavní výhodou používání \LaTeX{} je jeho schopnost vytvářet profesionálně vypadající dokumenty s konzistentním formátováním. Dále nabízí:
-
-\begin{itemize}
-	\item Vynikající kvalitu sazby, zvláště pro matematické vzorce.
-	\item Automatizované generování obsahu, seznamů obrázků, tabulek a bibliografických odkazů.
-	\item Možnost snadno pracovat s komplexními dokumenty jako jsou disertace nebo knihy.
-	\item Rozsáhlé možnosti přizpůsobení a širokou škálu balíčků rozšiřujících jeho funkčnost.
-\end{itemize}
-
-V následujících sekcích se podrobněji podíváme na základní prvky \LaTeX{} a naučíme se, jak je používat k vytváření kvalitních dokumentů.
-
-\subsection{Clerk}
-Hlavní výhodou používání \LaTeX{} je jeho schopnost vytvářet profesionálně vypadající dokumenty s konzistentním formátováním. Dále nabízí:
-
-
-\section{Backend}
+\chapter{Backend}
 \label{sec:backend}
 
-V této kapitole se podrobněji podíváme na základní strukturu dokumentu v \LaTeX{}u. Po porozumění této struktuře budete schopni vytvářet vlastní dokumenty s přizpůsobeným formátováním a strukturou.
+\section{Next.js 13}
+Next.js je framework pro React určený k tvorbě plně vybavených webových aplikací. K vytváření uživatelských rozhraní se používají React komponenty a Next.js se využívá pro další funkce a optimalizace.
 
-\subsection{JavaScript}
-Preambule je první částí každého \LaTeX{}ového dokumentu. Zde definujeme typ dokumentu, který chceme vytvořit, a nastavíme různé parametry, které ovlivňují celkový vzhled dokumentu. Preambule také často obsahuje příkazy pro načítání různých balíčků, které rozšiřují základní funkčnost \LaTeX{}u.
+Využité výhody z Next.js:
+\begin{itemize}
+	\item Vykreslování na straně serveru (SSR)
+	\item Optimalizace SEO
+	\item Optimalizace obrázků
+	\item Optimalizace fontů
+	\item funkce generateStaticParams
+	\item <Link> komponent
+	\item Server komponenty
+\end{itemize}
 
-\begin{verbatim}
-	\documentclass[options]{class}
-	\usepackage[options]{package}
-\end{verbatim}
+\subsection{Optimalizace obrázků}
+	Komponent Next.js Image rozšiřuje HTML element <img> o funkce pro automatickou optimalizaci obrázků:
+\begin{itemize}
+	\item Optimalizace velikosti: Automatické zobrazování obrázků ve správné velikosti pro každé zařízení pomocí moderních formátů, jako jsou WebP a AVIF.
+	\item Vizuální stabilita: Automatická prevence posunu rozvržení při načítání obrázků.
+	\item Rychlejší načítání stránek: Obrázky se načítají pouze ve chvíli, kdy vstoupí do zobrazovacího prostoru pomocí nativního líného načítání prohlížeče, s volitelnými zástupnými znaky rozmazání.
+	\item Flexibilita prostředků:  Možnost změny velikosti obrázků na vyžádání, a to i pro obrázky uložené na vzdálených serverech.
+\end{itemize}
 
-\subsection{Strapi GraphQl}
-Hlavní tělo dokumentu začíná příkazem \verb|\begin{document}| a končí \verb|\end{document}|. Veškerý obsah, který chcete mít ve svém dokumentu, by měl být umístěn mezi tyto dva příkazy. 
+\subsection{Optimalizace fontů}
+Automaticky optimalizuje font (včetně vlastních fontů) a odstraňuje externí síťové požadavky, čímž zlepšuje soukromí a výkon.
 
-\subsection{Model databáze}
-Pro organizaci obsahu se často používají sekce a podsekce. Tyto struktury pomáhají čtenáři lépe navigovat dokumentem a rozdělit text do logických bloků.
+'next/font' obsahuje vestavěný automatický selfhosting pro jakýkoli soubor fontů. Webové fonty se optimálně načítají bez jakéhokoli posunu v rozložení díky podkladovému CSS.
 
-	\chapter{Způsoby řešení a použité postupy}
-	\pagestyle{fancy}
-	Jak už jsem psal výše \LaTeX je dosti komplexní systém, který umožňuje psát velmi rozsáhlé text. Jeho autor Donald Knuth ho stvořil, aby mohl vydat jeho učebnici \emph{The Art of Computer Programming} a dodnes se je využíván pro sazbu skript, učebnic, článků či závěrečných prací. V této kapitole najdeš ukázky různých funkcí a balíčků \LaTeX u od těch nejzákladnějších až po složitější. Neznamená to nutně, že všechny musíš použít, ale když potřebuješ pomoct, tak je dobré mít oporu. 
+\vspace{10pt}
+
+\begin{lstlisting}[style=JavaScript, title={Kód}, caption={Ukázka layout.js}]
+	import { Albert_Sans } from "next/font/google";
 	
-	Pokud s \LaTeX em úplně začínáš tak ti můžu doporučit přiručku \emph{Ne příliš stručný úvod do systému \LaTeX2e}~\cite{LaTeXprirucka}. Případně spoustu užitečných informací nalezneš na Wikibooks~\cite{wikibooksLaTeX}. Pokud narazíš na nějaký problém googli. Na internetu je spoustu fór, kde pravděpodobně už někdo podobný problém řešil. Asi nejvíce otho najdeš na stránce \emph{TeX - LaTeX Stackexchange} \cite{stackExchange}.
-	
-	
-	\section{Založení projektu} %%[Text, který bude v obsahu]{Text, který se vytiskne na stránce} Zkus měnit jednotlivé závorky a uvidíš :) 
-	Psaní v \LaTeX{u} není žádná věda, stačí psát normálně do zdrojového souboru. Pokud bys chtěl psát obrážky či číslovaný seznam, pak můžeš použít prostředí \texttt{itemize} či \texttt{enumerate}. Často je důležité používat nezlomitelnou mezeru. Tu uděláš pomocí \verb|~|~(tildy). Pokud budeš chtít psát uvozovky použij příkaz \texttt{uv}, pomocí něj se ti vytvoří uvozovky podle příslušného jazyka. V česku tedy ve formátu 99 66. Použití příkazu najdeš níže v textu.
-	
-	Občas je zapotřebí \LaTeX{u} pomoct při rozdělování slov. To se udělá snadno vložením symbolů \verb|\-| mezi jednotlivé slabiky.
-	
-\begin{lstlisting}[style=Python, caption={Ukázka Python kódu}]
-	# Python code here
-	def hello_world():
-		print("Hello, world!")
-\end{lstlisting}
+	const albert = Albert_Sans({
+		subsets: ["latin"],
+		weight: ["200", "500", "700", "800", "900"],
+	});
+\end{lstlisting}	
 
+\subsection{Funkce generateStaticParams}
+Funkce generateStaticParams je zde využita ke generování slugů pro subject a question na základě dat získaných z databáze. Využívá objekt klienta k provedení dotazu na subject a následně mapuje výsledek, aby se vytvořil seznam objektů obsahujících slugy. 
 
-\begin{lstlisting}[style=JavaScript, title={Kód}, caption={Ukázka JS kódu}]
-	// JavaScript code here
-	function helloWorld() {
-		console.log("Hello, world!");
+Výsledkem této funkce je ploché pole obsahující slugy, které se využívají při generování statických stránek a navigaci v aplikaci.
+
+\vspace{10pt}
+
+\begin{lstlisting}[style=JavaScript, title={Kód}, caption={Ukázka funkce generateStaticParams v page.js}]
+	export async function generateStaticParams() {
+		const client = getClient();
+		const { data } = await client.query({ query: getSubject });
+		const result = data.subjects.data.map((subject) => {
+			return subject.attributes.questions.data.map((question) => {
+				return {
+					subjectSlug: subject.attributes.Slug,
+					questionSlug: question.attributes.Slug,
+				};
+			});
+		});
+		return result.flat();
 	}
 \end{lstlisting}	
+
+\subsection{<Link> komponent}
+<Link> je komponent v Reactu, který rozšiřuje HTML prvek <a> a umožňuje přednačítání a navigaci mezi routami na straně klienta. Je to primární způsob navigace mezi trasami v Next.js.
+
+\vspace{10pt}
+
+\begin{lstlisting}[style=JavaScript, title={Kód}, caption={Ukázka next/link v layout.js}] 
+	import Link from "next/link";
 	
-\begin{lstlisting}[style=ES6, caption={ES6 (ECMAScript-2015) Listing}]
-	/* eslint-env es6 */
-	/* eslint-disable no-unused-vars */
-	
-	import Axios from 'axios'
-	import { BASE_URL } from './utils/api'
-	import { getAPIToken } from './utils/helpers'
-	
-	export default class User {
-		constructor () {
-			this.id = null
-			this.username = null
-			this.email = ''
-			this.isActive = false
-			this.lastLogin = ''  // ISO 8601 formatted timestamp.
-			this.lastPWChange = ''  // ISO 8601 formatted timestamp.
+		<Link
+		key={question.slug}
+		href={
+			"/subjects/" + params.subjectSlug + "/" + question.slug
 		}
-	}
-	
-	const getUserProfile = async (id) => {
-		let user = new User()
-		await Axios.get(
-		`${BASE_URL}/users/${id}`,
-		{
-			headers: {
-				'Authorization': `Token ${getAPIToken()}`,
+		>
+		{order}. {question.name}
+		</Link>
+\end{lstlisting}	
+
+\subsection{React server komponenty}
+Server komponenty představují způsob spouštění React kmponentů na straně serveru a následné odeslání vykresleného výstupu do Reactu na straně klienta. To znamená, že se nemusí odesílat všechny závislosti, na kterých projekt závisí, což vede k rychlejšímu počátečnímu načtení stránky.
+
+Next.js 13 přináší řadu změn ve způsobu vytváření a vykreslování komponent, včetně zavedení RSC. App Router je nový směrovací systém, který je postaven nad RSC a poskytuje podporu vnořených tras, rozvržení, stavů načítání, zpracování chyb a dalších funkcí.
+
+\section{Komunikace pomocí GraphQL}
+GraphQL je dotazovací jazyk pro rozhraní API a běhové prostředí pro plnění těchto dotazů s existujícími daty. GraphQL poskytuje úplný a srozumitelný popis dat v rozhraní API a dává klientům možnost žádat přesně to, co potřebují. Usnadňuje vývoj rozhraní API v čase a umožňuje používat výkonné vývojářské nástroje.
+
+GraphQL dotaz je využíván k získání informací z API, které implementuje server postavený na Strapi. Na frontendové straně jsem využila Apollo Client k odeslání requestu.
+
+\newpage
+\begin{lstlisting}[style=JavaScript, title={Kód}, caption={Ukázka query v Content.js}] 
+	query {
+		categories {
+			data {
+				id
+				attributes {
+					Name
+				}
 			}
 		}
-		).then{response => {
-				// ...
-			}).catch(error => {
-				// ...
-			})
-		}
-\end{lstlisting}	
+	}
+\end{lstlisting}
+
+\section{Databázový model}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/scheme.png} 
+	\caption{Ukázka databázového modelu}
+\end{figure}
+
+\section{Vercel}
+Vercel je cloudová platforma pro nasazení a správu webových aplikací. Rozhodla jsem se využít tuto technologii, protože poskytuje jednoduchý způsob, jak nasadit statické a dynamické webové stránky, serverless funkcionalitu a další projekty spojené s vývojem webových a serverless aplikací.
+
+\section{Autorizace}
+
+\subsection{Clerk}
+Clerk je autentizační platforma umožňující přihlašování pomocí hesel, poskytovatelů sociálních identit, jednorázových přístupových kódů e-mailem nebo SMS, vícefaktorového ověřování a základní správy uživatelů.
+
+\subsubsection{Přidání ověřování a správy uživatelů do aplikace}
+Clerk se nainstaloval pomocí příkazu 'npm install @clerk/nextjs'. Poté se v souboru '.env.local' vložil KEY kód. Aplikace se následně zabalila do <ClerkProvider>. 
+
+\vspace{10pt}
+
+\begin{lstlisting}[style=JavaScript, title={Kód}, caption={Ukázka <ClerkProvider> v layout.js}] 
+	import { ClerkProvider } from "@clerk/nextjs";
 	
-	\section{Autentizace}
+	export default function RootLayout({ children }) {
+		return (
+			<ClerkProvider appearance={{ baseTheme: dark }}>
+				<html lang="en">
+					<body className={albert.className}>
+						<ApolloWrapper>{children}</ApolloWrapper>
+					</body>
+				</html>
+			</ClerkProvider>
+		);
+	}
+\end{lstlisting}
+
+\vspace{10pt}
+
+Vyžadování ověřování pro přístup k aplikaci je řešeno v souboru 'middleware.ts'. Tímto způsobem je zabezpečena ochrana před neautorizovaným přístupem na tyto cesty, přičemž uživatelé, kteří nejsou ověřeni, budou přesměrováni na stránku pro přihlášení nebo na hlavní stránku.
+
+\vspace{10pt}
+
+\begin{lstlisting}[style=JavaScript, title={Kód}, caption={Ukázka kódu v middleware.ts}] 
+	import { authMiddleware, redirectToSignIn } from "@clerk/nextjs";
 	
-	\subsection{Základní operace s uživatelským účtem}
+	export const config = {
+		matcher: ["/((?!.+\\.[\\w]+$|_next).*)", "/", "/(api|trpc)(.*)"],
+	};
+\end{lstlisting}
+
+\newpage
+Posledním krokem bylo vložit tlačítko <UserButton/>. Zde je <UserButton/> použit tak, že když je uživatel přihlášen, zobrazí se mu <UserButton/> a v opačném případě kdy je uživatel odhlášen, zobrazí se mu <SignInButton/>
+
+\vspace{10pt}
+
+\begin{lstlisting}[style=JavaScript, title={Kód}, caption={Ukázka kódu v middleware.ts}] 
+	<button>
+	<SignedIn>
+		<UserButton />
+	</SignedIn>
+	<SignedOut>
+	<SignInButton />
+		</SignedOut>
+	</button>
+\end{lstlisting}
+
+\subsection{Základní operace s uživatelským účtem}
+Clerk poskytuje řadu základních operací s uživatelským účtem, které umožňují správu uživatelských účtů v aplikaci. Mezi tyto základní operace patří: 
+
+\begin{itemize}
+	\item Registrace
+	\item Přihlášení
+	\item Odhlášení
+	\item Obnova hesla
+	\item Správa účtů
+	\item Ověření emailu
+\end{itemize}
+
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{image/clerk-profile.png} 
+	\caption{Ukázka správy účtu}
+\end{figure}
+
+Clerk má předem vestavěnou správu účtů a nabízí řadu stylů, které se mohou aplikovat. V aplikaci bylo použito tmavé téma.
+
+\vspace{10pt}
+
+\begin{lstlisting}[style=JavaScript, title={Kód}, caption={Ukázka Clerk dark theme v layout.js}] 
+	import { dark } from "@clerk/themes";
 	
-	Sazba matematiky je věda sama o sobě. Ačkoli Word prošel obrovskou změnou a je v~tomto mnohem lepší, tak \LaTeX je pro to přímo (ještě jsem neviděl matematika, co by používal Word). Spolu s balíčky \texttt{amsmath} a \texttt{amsfonts} snad neexistuje nic, co by se používalo a \LaTeX by to nezvládl. Ať už jde o základní věci jako řecká písmenka -- $\alpha, \beta, \gamma, \dots$ -- integrály -- $\int_{l_i}^{l_f} \tau \dif l $ -- až třeba po speciální písmena -- $\mathscr{F}: \mathbb{R}^n \to \mathbb{R}^m$. Pro případ, že bys potřeboval nějaké speciální integrály, je tu balíček \texttt{esint}, pomocí něj můžeš napsat třeba
-	$$ \oiint_{S(V)} \vec{E} \cdot \dif \vec{S} = \iiint_{V} \left(\vec{\nabla} \cdot \vec{E}\right) \dif V .$$
+	export default function RootLayout({ children }) {
+		return (
+		<ClerkProvider appearance={{ baseTheme: dark }}>
+			<html lang="en">
+				<body className={albert.className}>
+					<ApolloWrapper>{children}</ApolloWrapper>
+				</body>
+			</html>
+		</ClerkProvider>
+		);
+	}
+\end{lstlisting}
+
+\chapter{Frontend}
+\label{sec:frontend}
+
+\section{React}
+React je knihovna pro webová a nativní uživatelská rozhraní. Uživatelská rozhraní se skládají z jednotlivých částí nazývanými komponenty, které jsou napsané v jazyce JavaScript. React umožňuje snadno vytvářet interaktivní uživatelská rozhraní.
+
+\subsection{React JSX}
+JSX je zkratka pro JavaScript XML a umožňuje zapisovat prvky HTML v jazyce JavaScript a umisťovat je do DOM (Document Object Model) bez metod createElement() a/nebo appendChild().
+
+\vspace{10pt}
+
+\begin{lstlisting}[style=JavaScript, title={Kód}, caption={Ukázka využití JSX v page.js}] 
+	return (
+		<div>
+			{data.subjects.data.map((subject) => {
+				return (
+					<div key={subject.slug}>
+						<h3>
+							{subject.attributes.Name}
+						</h3>
+					</div>
+				);
+			})}
+		</div>
+	);
+\end{lstlisting}
+
+\newpage
+\subsection{React komponent}
+Komponenty jsou nezávislé a opakovaně použitelné části kódu. Slouží ke stejnému účelu jako funkce JavaScriptu, ale pracují samostatně a vracejí HTML. Komponenty existují ve dvou typech, komponenty třídy a komponenty funkce. V aplikaci byl využit komponent funkce.
+
+\subsection{React stav}
+React komponenty mají vestavěný stavový objekt. Do objektu stavu se ukládají hodnoty vlastností, které patří komponentě. Když se stavový objekt změní, komponenta se znovu vykreslí.
+
+\vspace{10pt}
+
+\begin{lstlisting}[style=JavaScript, title={Kód}, caption={Ukázka useState() v Collapsible.jsx}] 
+	import { useState } from "react";
 	
-	Jak můžeš vidět tak rovnice lze psát jednak do textu a nebo pokud se jedná o nějakou důležitou nebo rozsáhlejší rovnici tak na samostatný řádek. Pokud je rovnice opravdu důležitá, tak je vhodné ji také číslovat. Pak se na ni můžeš dále odkazovat v textu.
-	\begin{equation}
-		\vec{F} = m \vec{a}
-		\label{eq:newton2}
-	\end{equation}
-	\dots Například podle druhého Newtonova zákona, rovnice (\ref{eq:newton2}) \dots Zároveň je vždy nutné vysvětlit co která veličina znamená. V tomto případě bych napsal, že v druhém Newtonově zákoně vektor síly $\vec F$ odpovídá součinu hmotnosti tělesa $m$ a jeho zrychlení $\vec a$. 
+	const [isOpened, setIsOpened] = useState(true);
 	
-	Věřím, že se sazbou matematiky ti pomůže tvůj školitel, případně mi můžeš napsat (mail je v úvodu). Jednotlivé funkcionality spolu se seznamem znaků nalezneš jednak v Ne příliš stručném úvodu~\cite{LaTeXprirucka} nebo na Wikibooks v sekcích \emph{Mathematics} a \emph{Advanced mathematics}~\cite{wikibooksLaTeX}.
+	function toggleCollapsible() {
+		setIsOpened((old) => !old);
+	}>
+\end{lstlisting}
+
+\section{Tailwind CSS}
+Tailwind CSS je populární CSS framework, který poskytuje sadu předdefinovaných utilit a tříd pro stylování webových stránek a aplikací. Díky Tailwind CSS se nemusí vytvářet vlastní CSS styl a rovnou do elementů se píší styly pomocí 'className'. Vybrala jsem si Tailwind CSS jako svůj framework, protože místo předdefinovaných komponentů či stylů umožňuje pracovat přímo s jednotlivými vlastnostmi stylu a díky tomu jsem si mohla stránku nastylovat přesně podle sebe.
+
+\vspace{10pt}
+
+\begin{lstlisting}[style=JavaScript, title={Kód}, caption={Ukázka useState() v Collapsible.jsx}] 
+	<div
+		className="relative py-1 px-2 w-fit h-full text-white rounded-l-sm"
+		style={{ backgroundColor: tag.Color }}
+	>
+		{tag.Name}
+	</div>
+\end{lstlisting}
+
+\newpage
+\section{Apollo Client}
+Apollo Client je komplexní knihovna pro správu stavu v jazyce JavaScript, která umožňuje spravovat místní i vzdálená data pomocí jazyka GraphQL. Pro propojení frontendu s backendem jsem se rozhodla využít Apollo Client pro jeho popularitu a taky protože většina tutoriálu na propojení Strapi GraphQL s React Next.js nabízela Apollo Client.
+
+\subsection{Propojení frontendu s backendem}
+Začala jsem instalací závislotí 'npm install @apollo/client graphql'. V souboru client.js jsem inicializovala Apollo Client pomocí uvedeného kódu.
+
+\vspace{10pt}
+
+\begin{lstlisting}[style=JavaScript, title={Kód}, caption={Ukázka inicializace Apollo Clientu v client.js}] 
+import createUploadLink from "apollo-upload-client/createUploadLink.mjs";
+import {
+	NextSSRInMemoryCache,
+	NextSSRApolloClient,
+} from "@apollo/experimental-nextjs-app-support/ssr";
+import { registerApolloClient } from
+ "@apollo/experimental-nextjs-app-support/rsc";
+
+let apolloClient;
+
+export const { getClient } = registerApolloClient(() => {
+	const client = new NextSSRApolloClient({
+		cache: new NextSSRInMemoryCache(),
+		link: createUploadLink({
+			uri: "https://renowned-gift-126140aec8.strapiapp.com/graphql",
+		}),
+	});
 	
+	apolloClient = client;
+	return client;
+});
+
+\end{lstlisting}
+
+\newpage
+Posledním krokem bylo obalit aplikaci wrapperem <ApolloProvider>.
+
+\vspace{10pt}
+
+\begin{lstlisting}[style=JavaScript, title={Kód}, caption={Ukázka komponentu <ApolloProvider> v client.js}] 
+	<html lang="en">
+		<body className={albert.className}>
+			<ApolloWrapper>{children}</ApolloWrapper>
+		</body>
+	</html>
+\end{lstlisting}
+
+\chapter{Headless CMS}
+\label{sec:headlessCMS}
+Pro vývoj své webové aplikace jsem se rozhodla využít Headless CMS, protože je to jednoduchý způsob jak ukládat a spravovat své data na backendu, a to bez nutnosti vytváření vlastního backendu se serverem. Headless CMS umožňuje oddělit správu obsahu (backend) od prezentace obsahu (frontend), což přináší flexibilitu ve výběru frontendových technologií a zjednodušuje celkový vývoj aplikace.
+
+\section{Strapi}
+Původně jsem zvažovala možnost využití Hygraph, [] ale po následné konzultaci s panem učitelem jsme došli k závěru využití Strapi a později dockerizování aplikace.
+
+\section{Strapi GraphQL}
+GraphQL API umožňuje provádět dotazy a mutace pro interakci s typy obsahu prostřednictvím GraphQL pluginu v Strapi. Výsledky lze filtrovat, třídit a stránkovat. Ve své aplikaci jsem využila filtraci a třízení. Plugin měl také k dispozici playground, který jsem hodně využívala na dotazy předtím než jsem je aplikovala v kódu.
+
+\vspace{10pt}
+
+\begin{lstlisting}[style=JavaScript, title={Kód}, caption={Ukázka mutace v Content.js}] 
+ 	const uploadFile = gql`
+	 	mutation ($file: Upload!) {
+	 		upload(file: $file) {
+	 			data {
+	 				id
+	 			}
+	 		}
+	 	}
+	`;
+\end{lstlisting}
+
+\section{Strapi Cloud}
+
+\chapter{Funkce aplikace}
+
+\section{Nahrávání souboru}
+
+\section{Mazání souboru}
+
+\chapter*{Závěr}
 	
-	
-	\chapter{Funkce aplikace}
-	
-	Každou práci je dobré zkontrolovat, aby v ní nebyly pravopisné chyby, nebyla těžkopádně napsaná -- byla čtivá -- a neobsahovala žádný typografický nedostatek. Proto, když práci sepíšeš, nech ji chvilku odležet, třeba týden. Pak si ji po sobě znovu přečti. Hned uvidíš, kolik věcí bys napsal jinak případně kde tě bije do očí jaká chyba. Dej práci přečíst také svému školiteli a případně češtináři. Zajistíš tak, že bude obsahovat méně chyb.
-	
-	Pak můžeš práci vytisknout a hurá do soutěže.
-	
-	\chapter*{Závěr}
-	
-	Věřím, že jsem ti spolu se šablonou poskytl několik tipů, jak napsat práci. Ať už jde o úplné začátky s \LaTeX{}em. Či ukázku toho, co vše s ním zvládneš. Pokud bys měl k šabloně libovolné dotazy, rouhodně se na mě obrať. \LaTeX tvé práci dodá určitou krásu, tak doufám, že ti dodá sebevědomí a uspěješ při souteži. A i kdyby ne vzpomeň si, kolik ses toho musel naučit a hned uvidíš o jaký kus ses posunul.
-	
+	Závěr
+	\renewcommand{\bibname}{Seznam použitých zdrojů}
 	%% literatura
 	\begin{thebibliography}{99}
-		\bibitem{sablonaSOC} DOKULIL Jakub. \textit{Šablona pro psaní SOČ v programu \LaTeX} [Online]. Brno, 2020 [cit. 2020-08-24]. Dostupné z: \url{https://github.com/Kubiczek36/SOC_sablona}
-		\bibitem{LaTeXprirucka}OETIKER, Tobias, Hubert PARTL, Irene HYNA, Elisabeth SCHEGL, Michal KOČER a Pavel SÝKORA. \textit{Ne příliš stručný úvod do systému LaTeX2e} [online]. 1998 [cit. 2020-08-24]. Dostupné z: \url{https://www.jaroska.cz/elearning/informatika/typografie/lshort2e-cz.pdf}
-		\bibitem{wikibooksLaTeX}\textit{Wikibooks: LaTeX} [online]. San Francisco (CA): Wikimedia Foundation, 2001- [cit. 2020-08-24]. Dostupné z: \url{https://en.wikibooks.org/wiki/LaTeX}
-		\bibitem{stackExchange} \textit{TeX - LaTeX Stack Exchange} [online]. Stack Exchange, 2020 [cit. 2020-09-01]. Dostupné z: \url{https://tex.stackexchange.com}
-		\bibitem{sspuLogo} \textit{Střední škola průmyslová a umělecká Opava} [online]. [cit. 2023-11-11]. Dostupné z: \url{https://www.sspu-opava.cz}
-		\bibitem{citacePRO}\textit{Citace PRO} [online]. Citace.com, 2020 [cit. 2020-08-31]. Dostupné z: \url{https://www.citacepro.com}
-		\bibitem{Born2019} BORN, Max a Emil WOLF. \textit{Principles of optics: electromagnetic theory of propagation, interference and diffraction of light}. 7th (expanded) edition. Reprinted wirth corrections 2002. 15th printing 2019. Cambridge: Cambridge University Press, 2019. ISBN 978-0-521-64222-4.
+		\bibitem{Next.js}Next.js by Vercel - The React Framework [Online]. [cit. 2023-01-12]. Dostupné z: \url{https://nextjs.org}
+		\bibitem{GraphQL}GraphQL | A query language for your API [Online]. [cit. 2023-01-12]. Dostupné z: \url{https://graphql.org}
+		\bibitem{Clerk}Clerk | Authentication and User Management [Online]. [cit. 2023-01-12]. Dostupné z: \url{https://clerk.com}
+		\bibitem{W3Schools}W3schools Online Web Tutorials [Online]. [cit. 2023-01-13]. Dostupné z: \url{https://www.w3schools.com}
+		\bibitem{Tailwind CSS}Tailwind CSS - Rapidly build modern websites without ever ... [Online]. [cit. 2023-01-13]. Dostupné z: \url{https://tailwindcss.com}
+		\bibitem{Vercel}Vercel: Build and deploy the best Web experiences with The ... [Online]. [cit. 2023-01-13]. Dostupné z: \url{https://vercel.com}
+		\bibitem{Apollo Client}Introduction to Apollo Client [Online]. [cit. 2023-01-14]. Dostupné z: \url{https://www.apollographql.com/docs/react/}
+		\bibitem{RCS}React Server Components in Next.js 13 [Online]. [cit. 2023-01-14]. Dostupné z: \url{https://blog.logrocket.com/react-server-components-next-js-13/}
+		\bibitem{Strappi}Strapi - Open source Node.js Headless CMS
+		 [Online]. [cit. 2023-01-14]. Dostupné z: \url{https://strapi.io}
 	\end{thebibliography}
 	
 	%% obrázky 
 	\listoffigures
-	
-	%% tabulky
-	\listoftables
 	
 	\appendix %% začínají přílohy
 	

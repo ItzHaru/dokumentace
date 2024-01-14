@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.12.28)  7 JAN 2024 14:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.12.28)  14 JAN 2024 18:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -641,24 +641,24 @@ Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 (sablona-zaverecne-prace.aux)
 \openout1 = `sablona-zaverecne-prace.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 222.
-LaTeX Font Info:    ... okay on input line 222.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 222.
-LaTeX Font Info:    ... okay on input line 222.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 222.
-LaTeX Font Info:    ... okay on input line 222.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 222.
-LaTeX Font Info:    ... okay on input line 222.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 222.
-LaTeX Font Info:    ... okay on input line 222.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 222.
-LaTeX Font Info:    ... okay on input line 222.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 222.
-LaTeX Font Info:    ... okay on input line 222.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 222.
-LaTeX Font Info:    ... okay on input line 222.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 222.
-LaTeX Font Info:    ... okay on input line 222.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 191.
+LaTeX Font Info:    ... okay on input line 191.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 191.
+LaTeX Font Info:    ... okay on input line 191.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 191.
+LaTeX Font Info:    ... okay on input line 191.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 191.
+LaTeX Font Info:    ... okay on input line 191.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 191.
+LaTeX Font Info:    ... okay on input line 191.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 191.
+LaTeX Font Info:    ... okay on input line 191.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 191.
+LaTeX Font Info:    ... okay on input line 191.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 191.
+LaTeX Font Info:    ... okay on input line 191.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 191.
+LaTeX Font Info:    ... okay on input line 191.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -667,7 +667,7 @@ LaTeX Font Info:    ... okay on input line 222.
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: twoside 
+* modes: 
 * h-part:(L,W,R)=(99.58464pt, 455.24411pt, 42.67912pt)
 * v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
 * \paperwidth=597.50787pt
@@ -675,13 +675,13 @@ LaTeX Font Info:    ... okay on input line 222.
 * \textwidth=455.24411pt
 * \textheight=702.78308pt
 * \oddsidemargin=27.31465pt
-* \evensidemargin=-29.59087pt
+* \evensidemargin=27.31465pt
 * \topmargin=-38.1381pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=12.0pt
 * \footskip=30.0pt
-* \marginparwidth=85.0pt
+* \marginparwidth=35.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
 * \skip\footins=10.8pt plus 4.0pt minus 2.0pt
@@ -689,8 +689,8 @@ LaTeX Font Info:    ... okay on input line 222.
 * \voffset=0.0pt
 * \mag=1000
 * \@twocolumnfalse
-* \@twosidetrue
-* \@mparswitchtrue
+* \@twosidefalse
+* \@mparswitchfalse
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
@@ -724,7 +724,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 222.
+Package hyperref Info: Link coloring OFF on input line 191.
  (sablona-zaverecne-prace.out) (sablona-zaverecne-prace.out)
 \@outlinefile=\write3
 \openout3 = `sablona-zaverecne-prace.out'.
@@ -746,78 +746,83 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 \c@mv@tabular=\count325
 \c@mv@boldtabular=\count326
 \c@lstlisting=\count327
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 23
-2.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 20
+1.
 
 (C:\Users\asus\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
-<image/logo-skoly.png, id=36, 356.2911pt x 137.5539pt>
+<image/logo-skoly.png, id=120, 356.2911pt x 137.5539pt>
 File: image/logo-skoly.png Graphic file (type png)
 <use image/logo-skoly.png>
-Package pdftex.def Info: image/logo-skoly.png  used on input line 236.
+Package pdftex.def Info: image/logo-skoly.png  used on input line 205.
 (pdftex.def)             Requested size: 273.14923pt x 105.45715pt.
-<image/programovani-02.jpg, id=38, 1204.5pt x 677.53125pt>
-File: image/programovani-02.jpg Graphic file (type jpg)
-<use image/programovani-02.jpg>
-Package pdftex.def Info: image/programovani-02.jpg  used on input line 254.
-(pdftex.def)             Requested size: 364.19667pt x 204.86337pt.
+<image/homepage.png, id=122, 1284.8pt x 803.0pt>
+File: image/homepage.png Graphic file (type png)
+<use image/homepage.png>
+Package pdftex.def Info: image/homepage.png  used on input line 223.
+(pdftex.def)             Requested size: 364.19667pt x 227.61984pt.
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
- 259.
+ 228.
 
 (C:\Users\asus\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )<<ot1.cmap>>
 LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
- 259.
+ 228.
 
 (C:\Users\asus\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )<<oml.cmap>>
 LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
- 259.
+ 228.
 
 (C:\Users\asus\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )<<oms.cmap>>
 LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
- 259.
+ 228.
 
 (C:\Users\asus\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )<<omx.cmap>>
 LaTeX Font Info:    Trying to load font information for U+esint on input line 2
-59.
+28.
  (C:\Users\asus\AppData\Local\Programs\MiKTeX\tex/latex/esint\uesint.fd
 File: uesint.fd 
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 25
-9.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 22
+8.
 (C:\Users\asus\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 2
-59.
+28.
 
 (C:\Users\asus\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 259.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 228.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 259.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 228.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 259.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 228.
 
 [1
 
 
 {C:/Users/asus/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/asus/
 AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./image/logo-skoly.
-png> <./image/programovani-02.jpg>] [2
+png> <./image/homepage.png>] [2
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 301--304
+Underfull \hbox (badness 10000) in paragraph at lines 270--273
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--288
 
  []
 
@@ -831,146 +836,93 @@ Underfull \hbox (badness 10000) in paragraph at lines 301--304
 
 ] [2
 
-] [3] [4
 
 ]
 Kapitola 1.
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 3
-61.
+36.
 (C:\Users\asus\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-[5]
+[3
+
+
+]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 361.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
-81.
+61.
  (C:\Users\asus\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-[6]
+[4] [5]
+<image/scheme.png, id=231, 855.195pt x 880.28876pt>
+File: image/scheme.png Graphic file (type png)
+<use image/scheme.png>
+Package pdftex.def Info: image/scheme.png  used on input line 439.
+(pdftex.def)             Requested size: 318.66948pt x 328.01205pt.
+ [6 <./image/scheme.png (PNG copy)>] [7] [8] [9]
+<image/clerk-profile.png, id=289, 262.8219pt x 199.4652pt>
+File: image/clerk-profile.png Graphic file (type png)
+<use image/clerk-profile.png>
+Package pdftex.def Info: image/clerk-profile.png  used on input line 517.
+(pdftex.def)             Requested size: 364.19667pt x 276.4097pt.
+ [10 <./image/clerk-profile.png>]
 Kapitola 2.
-(C:\Users\asus\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2023/02/27 1.9 listings language file
-)
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 404.
+[11
 
-[7
 
-]
+] [12] [13] [14]
+Kapitola 3.
 LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
-422.
- (C:\Users\asus\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmtt.fd
+661.
+(C:\Users\asus\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmtt.fd
 File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
+[15
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.42601pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.42601pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
 
-(fancyhdr)                \addtolength{\topmargin}{-3.42601pt}.
+] [16]
+Kapitola 4.
+[17
 
-[8]
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.42601pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.42601pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
+] [18
 
-(fancyhdr)                \addtolength{\topmargin}{-3.42601pt}.
-
-[9]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.42601pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.42601pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.42601pt}.
-
-[10
-
-]
-Kapitola 3.
-[11]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[12
-
-] [13]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[14
 
 ] (sablona-zaverecne-prace.lof)
 \tf@lof=\write5
 \openout5 = `sablona-zaverecne-prace.lof'.
 
- (sablona-zaverecne-prace.lot)
-\tf@lot=\write6
-\openout6 = `sablona-zaverecne-prace.lot'.
+ [19
 
 
-Underfull \vbox (badness 2726) has occurred while \output is active []
-
- [15]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[16] (sablona-zaverecne-prace.aux)
+] (sablona-zaverecne-prace.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
 Package rerunfilecheck Info: File `sablona-zaverecne-prace.out' has not changed
 .
-(rerunfilecheck)             Checksum: 84E2BB36DDC46FDD440B56C1F584706D;997.
+(rerunfilecheck)             Checksum: 3A01DDD3A12CA64F13B32F5381BFFE83;3835.
  ) 
 Here is how much of TeX's memory you used:
- 18363 strings out of 475247
- 294644 string characters out of 5758263
- 1960785 words of memory out of 5000000
- 39404 multiletter control sequences out of 15000+600000
- 638194 words of font info for 125 fonts, out of 8000000 for 9000
+ 18442 strings out of 475247
+ 296334 string characters out of 5758263
+ 1948785 words of memory out of 5000000
+ 39383 multiletter control sequences out of 15000+600000
+ 621374 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 79i,11n,117p,853b,1572s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\asus\AppData\Local\MiKTeX\fonts/pk/ljfour/public/esint/dpi720\esin
-t10.pk> <C:\Users\asus\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\
-tctt1200.pk> <C:\Users\asus\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dp
-i600\ectt1200.pk><C:/Users/asus/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmex10.pfb><C:/Users/asus/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/amsfonts/cm/cmmi10.pfb><C:/Users/asus/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/asus/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/asus/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/asus/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><C:/Users/asus/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/asus/
-AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/asus/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/asus/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/asus/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/asus/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/asus/AppData
-/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on sablona-zaverecne-prace.pdf (19 pages, 320302 bytes).
+ 79i,11n,97p,823b,1504s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\asus\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt1
+200.pk> <C:\Users\asus\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\
+ectt1200.pk><C:/Users/asus/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvet
+ic/uhvb8a.pfb><C:/Users/asus/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
+s/utmb8a.pfb><C:/Users/asus/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times
+/utmr8a.pfb>
+Output written on sablona-zaverecne-prace.pdf (22 pages, 332060 bytes).
 PDF statistics:
- 386 PDF objects out of 1000 (max. 8388607)
- 91 named destinations out of 1000 (max. 500000)
- 95 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 589 PDF objects out of 1000 (max. 8388607)
+ 222 named destinations out of 1000 (max. 500000)
+ 273 words of extra memory for PDF output out of 10000 (max. 10000000)
 
