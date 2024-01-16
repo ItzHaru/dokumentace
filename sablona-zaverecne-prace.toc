@@ -1,31 +1,35 @@
 \babel@toc {czech}{}\relax 
 \contentsline {chapter}{Úvod}{2}{chapter*.4}%
 \contentsline {chapter}{\numberline {1}Backend}{3}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Next.js 13}{3}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Optimalizace obrázků}{3}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Optimalizace fontů}{4}{subsection.1.1.2}%
-\contentsline {subsection}{\numberline {1.1.3}Funkce generateStaticParams}{4}{subsection.1.1.3}%
-\contentsline {subsection}{\numberline {1.1.4}<Link> komponent}{5}{subsection.1.1.4}%
-\contentsline {subsection}{\numberline {1.1.5}React server komponenty}{5}{subsection.1.1.5}%
-\contentsline {section}{\numberline {1.2}Komunikace pomocí GraphQL}{5}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Databázový model}{6}{section.1.3}%
+\contentsline {section}{\numberline {1.1}Headless CMS}{3}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Strapi}{3}{subsection.1.1.1}%
+\contentsline {subsubsection}{Tvorba modelu}{3}{subsection.1.1.1}%
+\contentsline {subsubsection}{Vkládání dat}{4}{figure.caption.6}%
+\contentsline {subsection}{\numberline {1.1.2}Strapi GraphQL}{4}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Strapi Cloud}{6}{subsection.1.1.3}%
+\contentsline {section}{\numberline {1.2}Komunikace pomocí GraphQL}{6}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Databázový model}{7}{section.1.3}%
 \contentsline {section}{\numberline {1.4}Vercel}{7}{section.1.4}%
-\contentsline {section}{\numberline {1.5}Autorizace}{7}{section.1.5}%
-\contentsline {subsection}{\numberline {1.5.1}Clerk}{7}{subsection.1.5.1}%
-\contentsline {subsubsection}{Přidání ověřování a správy uživatelů do aplikace}{7}{subsection.1.5.1}%
+\contentsline {section}{\numberline {1.5}Autorizace a Autentizace}{7}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Clerk}{8}{subsection.1.5.1}%
+\contentsline {subsubsection}{Přidání ověřování a správy uživatelů do aplikace}{8}{subsection.1.5.1}%
 \contentsline {subsection}{\numberline {1.5.2}Základní operace s uživatelským účtem}{9}{subsection.1.5.2}%
 \contentsline {chapter}{\numberline {2}Frontend}{11}{chapter.2}%
 \contentsline {section}{\numberline {2.1}React}{11}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}React JSX}{11}{subsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.1.2}React komponent}{12}{subsection.2.1.2}%
 \contentsline {subsection}{\numberline {2.1.3}React stav}{12}{subsection.2.1.3}%
-\contentsline {section}{\numberline {2.2}Tailwind CSS}{12}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Apollo Client}{13}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Propojení frontendu s backendem}{13}{subsection.2.3.1}%
-\contentsline {chapter}{\numberline {3}Headless CMS}{15}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Strapi}{15}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Strapi GraphQL}{15}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Strapi Cloud}{16}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Funkce aplikace}{17}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Nahrávání souboru}{17}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Mazání souboru}{17}{section.4.2}%
+\contentsline {section}{\numberline {2.2}Next.js 13}{12}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Optimalizace obrázků}{13}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Optimalizace fontů}{13}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Funkce generateStaticParams}{14}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}<Link> komponent}{14}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}React server komponenty}{15}{subsection.2.2.5}%
+\contentsline {section}{\numberline {2.3}Apollo Client}{15}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Propojení frontendu s backendem}{15}{subsection.2.3.1}%
+\contentsline {section}{\numberline {2.4}Tailwind CSS}{16}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Funkce aplikace}{17}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Přihlášení}{17}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Nahrávání souboru}{17}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Stahování souboru}{18}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Mazání souboru}{19}{section.3.4}%

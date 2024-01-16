@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.12.28)  14 JAN 2024 18:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.12.28)  16 JAN 2024 00:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -752,16 +752,16 @@ LaTeX Font Info:    Trying to load font information for T1+phv on input line 20
 (C:\Users\asus\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
-<image/logo-skoly.png, id=120, 356.2911pt x 137.5539pt>
+<image/logo-skoly.png, id=128, 356.2911pt x 137.5539pt>
 File: image/logo-skoly.png Graphic file (type png)
 <use image/logo-skoly.png>
 Package pdftex.def Info: image/logo-skoly.png  used on input line 205.
 (pdftex.def)             Requested size: 273.14923pt x 105.45715pt.
-<image/homepage.png, id=122, 1284.8pt x 803.0pt>
+<image/homepage.png, id=130, 1284.8pt x 803.0pt>
 File: image/homepage.png Graphic file (type png)
 <use image/homepage.png>
 Package pdftex.def Info: image/homepage.png  used on input line 223.
-(pdftex.def)             Requested size: 364.19667pt x 227.61984pt.
+(pdftex.def)             Requested size: 409.71692pt x 256.0708pt.
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
  228.
 
@@ -839,90 +839,122 @@ Underfull \hbox (badness 10000) in paragraph at lines 285--288
 
 ]
 Kapitola 1.
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 3
-36.
-(C:\Users\asus\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)
+<image/strapi-question.png, id=195, 1109.94675pt x 540.21825pt>
+File: image/strapi-question.png Graphic file (type png)
+<use image/strapi-question.png>
+Package pdftex.def Info: image/strapi-question.png  used on input line 347.
+(pdftex.def)             Requested size: 364.19667pt x 177.25043pt.
 [3
 
 
-]
+ <./image/strapi-question.png>]
+<image/strapi-question.jpg, id=201, 1112.35574pt x 540.21825pt>
+File: image/strapi-question.jpg Graphic file (type jpg)
+<use image/strapi-question.jpg>
+Package pdftex.def Info: image/strapi-question.jpg  used on input line 357.
+(pdftex.def)             Requested size: 364.19667pt x 176.87125pt.
+<image/new-entry.jpg, id=202, 1124.40076pt x 540.8205pt>
+File: image/new-entry.jpg Graphic file (type jpg)
+<use image/new-entry.jpg>
+Package pdftex.def Info: image/new-entry.jpg  used on input line 368.
+(pdftex.def)             Requested size: 364.19667pt x 175.17041pt.
+ [4 <./image/strapi-question.jpg> <./image/new-entry.jpg>]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 361.
+nput line 377.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
-61.
- (C:\Users\asus\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
+77.
+
+(C:\Users\asus\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-[4] [5]
-<image/scheme.png, id=231, 855.195pt x 880.28876pt>
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
+378.
+
+(C:\Users\asus\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmtt.fd
+File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+[5] [6]
+<image/scheme.png, id=266, 855.195pt x 880.28876pt>
 File: image/scheme.png Graphic file (type png)
 <use image/scheme.png>
-Package pdftex.def Info: image/scheme.png  used on input line 439.
+Package pdftex.def Info: image/scheme.png  used on input line 442.
 (pdftex.def)             Requested size: 318.66948pt x 328.01205pt.
- [6 <./image/scheme.png (PNG copy)>] [7] [8] [9]
-<image/clerk-profile.png, id=289, 262.8219pt x 199.4652pt>
+ [7 <./image/scheme.png (PNG copy)>] [8]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 5
+12.
+
+(C:\Users\asus\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+[9]
+<image/clerk-profile.png, id=309, 262.8219pt x 199.4652pt>
 File: image/clerk-profile.png Graphic file (type png)
 <use image/clerk-profile.png>
-Package pdftex.def Info: image/clerk-profile.png  used on input line 517.
+Package pdftex.def Info: image/clerk-profile.png  used on input line 523.
 (pdftex.def)             Requested size: 364.19667pt x 276.4097pt.
  [10 <./image/clerk-profile.png>]
 Kapitola 2.
 [11
 
 
-] [12] [13] [14]
+] [12] [13] [14] [15] [16]
 Kapitola 3.
-LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
-661.
-(C:\Users\asus\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmtt.fd
-File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-)
-[15
-
-
-] [16]
-Kapitola 4.
+<image/sign-in.jpg, id=444, 1111.15125pt x 501.072pt>
+File: image/sign-in.jpg Graphic file (type jpg)
+<use image/sign-in.jpg>
+Package pdftex.def Info: image/sign-in.jpg  used on input line 746.
+(pdftex.def)             Requested size: 455.24411pt x 205.29558pt.
 [17
 
 
-] [18
+ <./image/sign-in.jpg>]
+<image/upload.jpg, id=450, 1111.15125pt x 540.21825pt>
+File: image/upload.jpg Graphic file (type jpg)
+<use image/upload.jpg>
+Package pdftex.def Info: image/upload.jpg  used on input line 756.
+(pdftex.def)             Requested size: 455.24411pt x 221.33429pt.
+<image/download.jpg, id=451, 1109.94675pt x 540.21825pt>
+File: image/download.jpg Graphic file (type jpg)
+<use image/download.jpg>
+Package pdftex.def Info: image/download.jpg  used on input line 765.
+(pdftex.def)             Requested size: 455.24411pt x 221.5651pt.
+ [18 <./image/upload.jpg> <./image/download.jpg>]
+[19] [20
 
 
-] (sablona-zaverecne-prace.lof)
+] (sablona-zaverecne-prace.lof [21
+
+
+])
 \tf@lof=\write5
 \openout5 = `sablona-zaverecne-prace.lof'.
 
- [19
-
-
-] (sablona-zaverecne-prace.aux)
+ [22] (sablona-zaverecne-prace.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
 Package rerunfilecheck Info: File `sablona-zaverecne-prace.out' has not changed
 .
-(rerunfilecheck)             Checksum: 3A01DDD3A12CA64F13B32F5381BFFE83;3835.
+(rerunfilecheck)             Checksum: 5FFFD2590F935BB7AB1BB47E4504F380;4209.
  ) 
 Here is how much of TeX's memory you used:
- 18442 strings out of 475247
- 296334 string characters out of 5758263
- 1948785 words of memory out of 5000000
- 39383 multiletter control sequences out of 15000+600000
+ 18541 strings out of 475247
+ 298320 string characters out of 5758263
+ 1954785 words of memory out of 5000000
+ 39448 multiletter control sequences out of 15000+600000
  621374 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 79i,11n,97p,823b,1504s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,11n,97p,1334b,2161s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\asus\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt1
 200.pk> <C:\Users\asus\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\
 ectt1200.pk><C:/Users/asus/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvet
 ic/uhvb8a.pfb><C:/Users/asus/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
 s/utmb8a.pfb><C:/Users/asus/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times
 /utmr8a.pfb>
-Output written on sablona-zaverecne-prace.pdf (22 pages, 332060 bytes).
+Output written on sablona-zaverecne-prace.pdf (25 pages, 1105548 bytes).
 PDF statistics:
- 589 PDF objects out of 1000 (max. 8388607)
- 222 named destinations out of 1000 (max. 500000)
- 273 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 662 PDF objects out of 1000 (max. 8388607)
+ 256 named destinations out of 1000 (max. 500000)
+ 319 words of extra memory for PDF output out of 10000 (max. 10000000)
 

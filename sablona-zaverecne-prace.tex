@@ -220,7 +220,7 @@ openright
 		
 		\begin{figure}[h]
 			\centering
-			\includegraphics[width=0.8\linewidth]{image/homepage.png} 
+			\includegraphics[width=0.9\linewidth]{image/homepage.png} 
 		\end{figure}
 		
 		\vspace{0.02 \textheight}
@@ -268,7 +268,7 @@ openright
 %% Abstrakt v češtině
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\noindent{\Large{\bfseries{Abstrakt}\\}}
-	Výsledkem projektu je funkční webová aplikace pro ukládání souborů k určité maturitní otázce. Aplikace umožňuje přihlášení uživatele přes Email, Google, GitHub a Microsoft. Stránka obsahuje maturitní otázky, které jsou rozděleny do určitých kategorií a jsou přehledně zobrazeny. Uživatel si vybírá otázku ke které pak přidá výukový soubor. Soubory se ukládají ke každé otázce zvlášť a jsou k dispozici ke stažení pro přihlášeného uživatele. Každý uživatel vidí pouze své uložené soubory. Při nahrávání výukového matetirálu musí uživatel soubor zařadit do kategorie, která se pak zobrazuje jako štítek vedle nahraného souboru. Vedle štítku se pak nachází tlačítko, které umožňuje smazání souboru.
+	Výsledkem projektu je funkční webová aplikace pro ukládání souborů k určité maturitní otázce. Využila jsem Strapi jako backend a na frontend React Next.js. Komunikaci mezi něma jsem zajistila pomocí GraphQL. Aplikace umožňuje přihlášení uživatele přes E-mail, Google, GitHub a Microsoft. Stránka obsahuje maturitní otázky, které jsou rozděleny do určitých kategorií a jsou přehledně zobrazeny. Uživatel si vybírá otázku ke které pak přidá výukový soubor. Soubory se ukládají ke každé otázce zvlášť a jsou k dispozici ke stažení pro přihlášeného uživatele. Každý uživatel vidí pouze své uložené soubory. Při nahrávání výukového matetirálu musí uživatel soubor zařadit do kategorie, která se pak zobrazuje jako štítek vedle nahraného souboru. Vedle štítku se pak nachází tlačítko, které umožňuje smazání souboru.
 	\\
 	
 	\vspace{18pt}
@@ -283,7 +283,7 @@ openright
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
 	\noindent{\Large{\bfseries{Abstract}\\}}
-	The result of the project is a functional web application for storing files for a specific graduation question. The application allows user login via Email, Google, GitHub and Microsoft. The site contains graduation questions that are divided into specific categories and are clearly displayed. The user chooses a question to which they then add a educational file. The files are stored for each question separately and are available for download to the logged-in user. Each user can only see their own saved files. When uploading a educational material, the user must categorize the file, which is then displayed as a label next to the uploaded file. Next to the label, there is a button allowing the user to delete the file.
+	The result of the project is a functional web application for storing files for a specific graduation question. I used Strapi for the backend and React Next.js for the frontend. I ensured communication between them using GraphQL. The application allows user login via Email, Google, GitHub and Microsoft. The site contains graduation questions that are divided into specific categories and are clearly displayed. The user chooses a question to which they then add a educational file. The files are stored for each question separately and are available for download to the logged-in user. Each user can only see their own saved files. When uploading a educational material, the user must categorize the file, which is then displayed as a label next to the uploaded file. Next to the label, there is a button allowing the user to delete the file.
 	\\
 	
 	\vspace{18pt}
@@ -315,7 +315,9 @@ openright
 %První parametr toc označuje, že přidáváme záznam do Table of Contents (obsahu).
 %Druhý parametr chapter specifikuje úroveň záznamu. V tomto případě říkáme, že přidávaný záznam má být považován za kapitolu.
 %Třetí parametr Úvod je text, který se objeví v obsahu. V tomto případě bude v obsahu zobrazen název "Úvod".	
-Úvod
+Mým záměrem bylo si zkusit vytvořit webovou aplikaci v React Next.js na téma maturitní okruhy. Chtěla jsem docílit toho, aby všechny výukové materiály, týkající se maturity, byly na jednom místě a také se přehledně zobrazovaly. K tomu jsem chtěla přidat uživatelské účty, aby každý měl prostor si ukládat své výukové materiály a kdykoli je měl k dispozici ke stáhnutí. Měla jsem zájem se seznámit s moderními technologiemi React a Next.js, ale tyhle technologie by mi nestačily a musela jsem k tomu přidat backend. Původně jsem chtěla využít headless CMS Hygraph, který má self cloud hosting a nemusela bych řešit cloudové hostování svých dat. Ale po konzultaci se svým učitelem jsme došli ke závěru, že by aplikace obsahovala moc dat, tak by bylo lepší využít Strapi a následně aplikaci dockerizovat. Strapi ale nabízelo plugin Strapi cloud, který zajistil cloud hosting mých dat, a tak jsem se k dockerizování aplikaci nedostala. U komunikace frontendu s backendem jsem využila dotazovací jazyk GraphQL. Narozdíl od REST API, které přenáší pevně stanovená data bez ohledu na potřeby klienta, GraphQL umožňuje klientům získávat přesně ta data, která potřebují, a to v jediném požadavku.
+
+V dokumentaci projektu popisuju technologie které jsem použila a řeším postup dané aplikace. V kapitole backend zmiňuju technologie Strapi, Vercel a Clerk. Další kapitolou je frontend, kde zmiňuju technologie React, Next.js 13, Apollo Client a Tailwind CSS. V poslední kapitole popisuju funkce aplikace a v závěru už zmiňuju budoucí cíle.
 
 %Tipy k psaní úvodu
 %Je povinný, nadpis neměňte, rozsah - max. 1 strana. 
@@ -328,97 +330,97 @@ openright
 \chapter{Backend}
 \label{sec:backend}
 
-\section{Next.js 13}
-Next.js je framework pro React určený k tvorbě plně vybavených webových aplikací. K vytváření uživatelských rozhraní se používají React komponenty a Next.js se využívá pro další funkce a optimalizace.
+\section{Headless CMS}
+\label{sec:headlessCMS}
+Pro vývoj své webové aplikace jsem se rozhodla využít Headless CMS, protože je to jednoduchý způsob jak ukládat a spravovat své data na backendu, a to bez nutnosti vytváření vlastního backendu se serverem. Headless CMS umožňuje oddělit správu obsahu (backend) od prezentace obsahu (frontend), což přináší flexibilitu ve výběru frontendových technologií a zjednodušuje celkový vývoj aplikace.
 
-Využité výhody z Next.js:
-\begin{itemize}
-	\item Vykreslování na straně serveru (SSR)
-	\item Optimalizace SEO
-	\item Optimalizace obrázků
-	\item Optimalizace fontů
-	\item funkce generateStaticParams
-	\item <Link> komponent
-	\item Server komponenty
-\end{itemize}
+\subsection{Strapi}
+Původně jsem zvažovala možnost využití Hygraph, který využívá self cloud hosting, ale po následné konzultaci s panem učitelem jsme došli k závěru využití Strapi a později dockerizování aplikace.
 
-\subsection{Optimalizace obrázků}
-	Komponent Next.js Image rozšiřuje HTML element <img> o funkce pro automatickou optimalizaci obrázků:
-\begin{itemize}
-	\item Optimalizace velikosti: Automatické zobrazování obrázků ve správné velikosti pro každé zařízení pomocí moderních formátů, jako jsou WebP a AVIF.
-	\item Vizuální stabilita: Automatická prevence posunu rozvržení při načítání obrázků.
-	\item Rychlejší načítání stránek: Obrázky se načítají pouze ve chvíli, kdy vstoupí do zobrazovacího prostoru pomocí nativního líného načítání prohlížeče, s volitelnými zástupnými znaky rozmazání.
-	\item Flexibilita prostředků:  Možnost změny velikosti obrázků na vyžádání, a to i pro obrázky uložené na vzdálených serverech.
-\end{itemize}
-
-\subsection{Optimalizace fontů}
-Automaticky optimalizuje font (včetně vlastních fontů) a odstraňuje externí síťové požadavky, čímž zlepšuje soukromí a výkon.
-
-'next/font' obsahuje vestavěný automatický selfhosting pro jakýkoli soubor fontů. Webové fonty se optimálně načítají bez jakéhokoli posunu v rozložení díky podkladovému CSS.
+\subsubsection{Tvorba modelu}
+Strapi umožňuje lehkou a přehlednou tvorbu modelu. V Strapi dashbord kliknutím na 'Create new collection type' jsem vytvořila model nazvaný 'Question'. 
 
 \vspace{10pt}
 
-\begin{lstlisting}[style=JavaScript, title={Kód}, caption={Ukázka layout.js}]
-	import { Albert_Sans } from "next/font/google";
-	
-	const albert = Albert_Sans({
-		subsets: ["latin"],
-		weight: ["200", "500", "700", "800", "900"],
-	});
-\end{lstlisting}	
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{image/strapi-question.png} 
+	\caption{Ukázka vytváření modelu ve Strapi}
+\end{figure}
 
-\subsection{Funkce generateStaticParams}
-Funkce generateStaticParams je zde využita ke generování slugů pro subject a question na základě dat získaných z databáze. Využívá objekt klienta k provedení dotazu na subject a následně mapuje výsledek, aby se vytvořil seznam objektů obsahujících slugy. 
-
-Výsledkem této funkce je ploché pole obsahující slugy, které se využívají při generování statických stránek a navigaci v aplikaci.
+Poté jsem přidala jednotlivá pole pomocí tlačítka 'Add another field'. Také jsem propojila model Question s ostatními modely pomocí relací.
 
 \vspace{10pt}
 
-\begin{lstlisting}[style=JavaScript, title={Kód}, caption={Ukázka funkce generateStaticParams v page.js}]
-	export async function generateStaticParams() {
-		const client = getClient();
-		const { data } = await client.query({ query: getSubject });
-		const result = data.subjects.data.map((subject) => {
-			return subject.attributes.questions.data.map((question) => {
-				return {
-					subjectSlug: subject.attributes.Slug,
-					questionSlug: question.attributes.Slug,
-				};
-			});
-		});
-		return result.flat();
-	}
-\end{lstlisting}	
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{image/strapi-question.jpg} 
+	\caption{Ukázka přidávání pole do modelu}
+\end{figure}
 
-\subsection{<Link> komponent}
-<Link> je komponent v Reactu, který rozšiřuje HTML prvek <a> a umožňuje přednačítání a navigaci mezi routami na straně klienta. Je to primární způsob navigace mezi trasami v Next.js.
+\subsubsection{Vkládání dat}
+Data jsem pak vkládala tlačítkem 'Create new entry', kde jsem vyplnila následující pole a uložila tlačítkem 'Save'
 
 \vspace{10pt}
 
-\begin{lstlisting}[style=JavaScript, title={Kód}, caption={Ukázka next/link v layout.js}] 
-	import Link from "next/link";
-	
-		<Link
-		key={question.slug}
-		href={
-			"/subjects/" + params.subjectSlug + "/" + question.slug
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{image/new-entry.jpg} 
+	\caption{Ukázka vkládání dat do modelu}
+	\end{figure}
+
+\subsection{Strapi GraphQL}
+GraphQL API umožňuje provádět dotazy a mutace pro interakci s typy obsahu prostřednictvím GraphQL pluginu v Strapi. Výsledky lze filtrovat, třídit a stránkovat. Ve své aplikaci jsem využila filtraci a třízení. Plugin měl také k dispozici playground, který jsem často využívala k testování dotazů předtím, než jsem je použila v kódu.
+
+\vspace{10pt}
+
+\begin{lstlisting}[style=JavaScript, title={Kód}, caption={Ukázka mutace v Content.js}] 
+	const createNewSource = gql`
+	mutation (
+	$name: String!
+	$userId: String!
+	$file: ID!
+	$categoriesId: [ID]!
+	$questionId: ID
+	) {
+		createSource(
+		data: {
+			Name: $name
+			Userid: $userId
+			publishedAt: "2007-12-03T10:15:30Z"
+			categories: $categoriesId
+			question: $questionId
+			Files: $file
 		}
-		>
-		{order}. {question.name}
-		</Link>
-\end{lstlisting}	
+		) {
+			data {
+				id
+			}
+		}
+	}
+	`;
+	
+	const uploadFile = gql`
+	mutation ($file: Upload!) {
+		upload(file: $file) {
+			data {
+				id
+			}
+		}
+	}
+	`;
+\end{lstlisting}
 
-\subsection{React server komponenty}
-Server komponenty představují způsob spouštění React kmponentů na straně serveru a následné odeslání vykresleného výstupu do Reactu na straně klienta. To znamená, že se nemusí odesílat všechny závislosti, na kterých projekt závisí, což vede k rychlejšímu počátečnímu načtení stránky.
-
-Next.js 13 přináší řadu změn ve způsobu vytváření a vykreslování komponent, včetně zavedení RSC. App Router je nový směrovací systém, který je postaven nad RSC a poskytuje podporu vnořených tras, rozvržení, stavů načítání, zpracování chyb a dalších funkcí.
+\subsection{Strapi Cloud}
+Strapi Cloud je platforma pro správu obsahu postavená na Strapi, předním open-source headless CMS. Jedná se o plně spravovanou hostingovou platformu, která umožňuje nasadit Strapi aplikace během několika minut. Je to placená platforma, ale využila jsem jejich zkušební dobu na 14 dní. Díky Strapi cloud jsem nemusela aplikaci dockerovat.
 
 \section{Komunikace pomocí GraphQL}
-GraphQL je dotazovací jazyk pro rozhraní API a běhové prostředí pro plnění těchto dotazů s existujícími daty. GraphQL poskytuje úplný a srozumitelný popis dat v rozhraní API a dává klientům možnost žádat přesně to, co potřebují. Usnadňuje vývoj rozhraní API v čase a umožňuje používat výkonné vývojářské nástroje.
+GraphQL je dotazovací jazyk pro rozhraní API a běhové prostředí pro plnění těchto dotazů s existujícími daty. Pro komunikaci mezi frontendem a backendem jsem využila GraphQL hlavně z důvodu, že GraphQL umožňuje klientům získat přesně ty data, které potřebují, což může vést k menšímu množství přenášených dat narozdíl od REST API, které poskytuje pevně definované endpointy s předem stanovenými daty, což může znamenat, že klienti musí získat více dat, než skutečně potřebují.
 
-GraphQL dotaz je využíván k získání informací z API, které implementuje server postavený na Strapi. Na frontendové straně jsem využila Apollo Client k odeslání requestu.
+GraphQL dotaz je využíván k získání informací z API, které implementuje server postavený na Strapi. Na frontendové straně jsem pak využila Apollo Client k odeslání requestu.
 
-\newpage
+\vspace{10pt}
+
 \begin{lstlisting}[style=JavaScript, title={Kód}, caption={Ukázka query v Content.js}] 
 	query {
 		categories {
@@ -432,6 +434,7 @@ GraphQL dotaz je využíván k získání informací z API, které implementuje 
 	}
 \end{lstlisting}
 
+\newpage
 \section{Databázový model}
 
 \begin{figure}[h]
@@ -440,11 +443,14 @@ GraphQL dotaz je využíván k získání informací z API, které implementuje 
 	\caption{Ukázka databázového modelu}
 \end{figure}
 
+Základem modelu jsou otázky - questions, na které navazují předměty - subjects (počítačové systémy, programové vybavení), kategorie - categories (PCS, HW, PVY, PRP), podotázky - subquestions, praktické úkoly - tasks, zdroje - sources
+
 \section{Vercel}
 Vercel je cloudová platforma pro nasazení a správu webových aplikací. Rozhodla jsem se využít tuto technologii, protože poskytuje jednoduchý způsob, jak nasadit statické a dynamické webové stránky, serverless funkcionalitu a další projekty spojené s vývojem webových a serverless aplikací.
 
-\section{Autorizace}
+\section{Autorizace a Autentizace}
 
+\newpage
 \subsection{Clerk}
 Clerk je autentizační platforma umožňující přihlašování pomocí hesel, poskytovatelů sociálních identit, jednorázových přístupových kódů e-mailem nebo SMS, vícefaktorového ověřování a základní správy uživatelů.
 
@@ -518,7 +524,7 @@ Clerk poskytuje řadu základních operací s uživatelským účtem, které umo
 	\caption{Ukázka správy účtu}
 \end{figure}
 
-Clerk má předem vestavěnou správu účtů a nabízí řadu stylů, které se mohou aplikovat. V aplikaci bylo použito tmavé téma.
+Clerk má předem vestavěnou správu účtů a nabízí řadu stylů, které se mohou aplikovat. V aplikaci jsem použila tmavé téma.
 
 \vspace{10pt}
 
@@ -567,10 +573,10 @@ JSX je zkratka pro JavaScript XML a umožňuje zapisovat prvky HTML v jazyce Jav
 
 \newpage
 \subsection{React komponent}
-Komponenty jsou nezávislé a opakovaně použitelné části kódu. Slouží ke stejnému účelu jako funkce JavaScriptu, ale pracují samostatně a vracejí HTML. Komponenty existují ve dvou typech, komponenty třídy a komponenty funkce. V aplikaci byl využit komponent funkce.
+Komponenty jsou nezávislé a opakovaně použitelné části kódu. Slouží ke stejnému účelu jako funkce JavaScriptu, ale pracují samostatně a vracejí HTML. Komponenty existují ve dvou typech, komponenty třídy a komponenty funkce. V aplikaci jsem využila jeden komponent funkce nazvaný 'Collapsible.jsx' a na stránce mi umožňuje v sidebaru rozkliknout kategorii, ve které se nachází otázky a zároveň zpátky kategorii zavřít.
 
 \subsection{React stav}
-React komponenty mají vestavěný stavový objekt. Do objektu stavu se ukládají hodnoty vlastností, které patří komponentě. Když se stavový objekt změní, komponenta se znovu vykreslí.
+React komponenty mají vestavěný stavový objekt. Do objektu stavu se ukládají hodnoty vlastností, které patří komponentě. Když se stavový objekt změní, komponenta se znovu vykreslí. Využila jsem React stav ve své komponentě 'Collapsible.jsx'. Používá se zde jednoduchý přepínací mechanismus, který umožňuje změnu stavu z otevřené kategorie na zavřenou po každém kliknutí. Tento mechanismus je následně implementován na stránce v bočním panelu a poskytuje funkcionalitu rozklikávání a zavírání kategorií.
 
 \vspace{10pt}
 
@@ -584,21 +590,92 @@ React komponenty mají vestavěný stavový objekt. Do objektu stavu se ukládaj
 	}>
 \end{lstlisting}
 
-\section{Tailwind CSS}
-Tailwind CSS je populární CSS framework, který poskytuje sadu předdefinovaných utilit a tříd pro stylování webových stránek a aplikací. Díky Tailwind CSS se nemusí vytvářet vlastní CSS styl a rovnou do elementů se píší styly pomocí 'className'. Vybrala jsem si Tailwind CSS jako svůj framework, protože místo předdefinovaných komponentů či stylů umožňuje pracovat přímo s jednotlivými vlastnostmi stylu a díky tomu jsem si mohla stránku nastylovat přesně podle sebe.
+\section{Next.js 13}
+Next.js je framework pro React určený k tvorbě plně vybavených webových aplikací. K vytváření uživatelských rozhraní se používají React komponenty a Next.js se využívá pro další funkce a optimalizace.
 
 \vspace{10pt}
 
-\begin{lstlisting}[style=JavaScript, title={Kód}, caption={Ukázka useState() v Collapsible.jsx}] 
-	<div
-		className="relative py-1 px-2 w-fit h-full text-white rounded-l-sm"
-		style={{ backgroundColor: tag.Color }}
-	>
-		{tag.Name}
-	</div>
-\end{lstlisting}
+Využité výhody z Next.js:
+\begin{itemize}
+	\item Vykreslování na straně serveru (SSR)
+	\item Optimalizace SEO
+	\item Optimalizace obrázků
+	\item Optimalizace fontů
+	\item funkce generateStaticParams
+	\item <Link> komponent
+	\item Server komponenty
+\end{itemize}
 
-\newpage
+\subsection{Optimalizace obrázků}
+Komponent Next.js Image rozšiřuje HTML element <img> o funkce pro automatickou optimalizaci obrázků:
+
+\begin{itemize}
+	\item Optimalizace velikosti: Automatické zobrazování obrázků ve správné velikosti pro každé zařízení pomocí moderních formátů, jako jsou WebP a AVIF.
+	\item Vizuální stabilita: Automatická prevence posunu rozvržení při načítání obrázků.
+	\item Rychlejší načítání stránek: Obrázky se načítají pouze ve chvíli, kdy vstoupí do zobrazovacího prostoru pomocí nativního líného načítání prohlížeče, s volitelnými zástupnými znaky rozmazání.
+	\item Flexibilita prostředků:  Možnost změny velikosti obrázků na vyžádání, a to i pro obrázky uložené na vzdálených serverech.
+\end{itemize}
+
+\subsection{Optimalizace fontů}
+Automaticky optimalizuje font (včetně vlastních fontů) a odstraňuje externí síťové požadavky, čímž zlepšuje soukromí a výkon.
+
+'next/font' obsahuje vestavěný automatický selfhosting pro jakýkoli soubor fontů. Webové fonty se optimálně načítají bez jakéhokoli posunu v rozložení díky podkladovému CSS.
+
+\vspace{10pt}
+
+\begin{lstlisting}[style=JavaScript, title={Kód}, caption={Ukázka layout.js}]
+	import { Albert_Sans } from "next/font/google";
+	
+	const albert = Albert_Sans({
+		subsets: ["latin"],
+		weight: ["200", "500", "700", "800", "900"],
+	});
+\end{lstlisting}	
+
+\subsection{Funkce generateStaticParams}
+Funkce generateStaticParams je zde využita ke generování slugů pro subject a question na základě dat získaných z databáze. Využívá objekt klienta k provedení dotazu na subject a následně mapuje výsledek, aby se vytvořil seznam objektů obsahujících slugy. 
+
+Výsledkem této funkce je ploché pole obsahující slugy, které se využívají při generování statických stránek a navigaci v aplikaci.
+
+\vspace{10pt}
+
+\begin{lstlisting}[style=JavaScript, title={Kód}, caption={Ukázka funkce generateStaticParams v page.js}]
+	export async function generateStaticParams() {
+		const client = getClient();
+		const { data } = await client.query({ query: getSubject });
+		const result = data.subjects.data.map((subject) => {
+			return subject.attributes.questions.data.map((question) => {
+				return {
+					subjectSlug: subject.attributes.Slug,
+					questionSlug: question.attributes.Slug,
+				};
+			});
+		});
+		return result.flat();
+	}
+\end{lstlisting}	
+
+\subsection{<Link> komponent}
+<Link> je komponent v Reactu, který rozšiřuje HTML prvek <a> a umožňuje přednačítání a navigaci mezi routami na straně klienta. Je to primární způsob navigace mezi trasami v Next.js.
+
+\vspace{10pt}
+
+\begin{lstlisting}[style=JavaScript, title={Kód}, caption={Ukázka next/link v layout.js}] 
+	import Link from "next/link";
+	
+	<Link
+	key={question.slug}
+	href={"/subjects/" + params.subjectSlug + "/" + question.slug }
+	>
+	{order}. {question.name}
+	</Link>
+\end{lstlisting}	
+
+\subsection{React server komponenty}
+Server komponenty představují způsob spouštění React kmponentů na straně serveru a následné odeslání vykresleného výstupu do Reactu na straně klienta. To znamená, že se nemusí odesílat všechny závislosti, na kterých projekt závisí, což vede k rychlejšímu počátečnímu načtení stránky.
+
+Next.js 13 přináší řadu změn ve způsobu vytváření a vykreslování komponent, včetně zavedení RSC. App Router je nový směrovací systém, který je postaven nad RSC a poskytuje podporu vnořených tras, rozvržení, stavů načítání, zpracování chyb a dalších funkcí.
+
 \section{Apollo Client}
 Apollo Client je komplexní knihovna pro správu stavu v jazyce JavaScript, která umožňuje spravovat místní i vzdálená data pomocí jazyka GraphQL. Pro propojení frontendu s backendem jsem se rozhodla využít Apollo Client pro jeho popularitu a taky protože většina tutoriálu na propojení Strapi GraphQL s React Next.js nabízela Apollo Client.
 
@@ -614,7 +691,7 @@ import {
 	NextSSRApolloClient,
 } from "@apollo/experimental-nextjs-app-support/ssr";
 import { registerApolloClient } from
- "@apollo/experimental-nextjs-app-support/rsc";
+"@apollo/experimental-nextjs-app-support/rsc";
 
 let apolloClient;
 
@@ -632,7 +709,6 @@ export const { getClient } = registerApolloClient(() => {
 
 \end{lstlisting}
 
-\newpage
 Posledním krokem bylo obalit aplikaci wrapperem <ApolloProvider>.
 
 \vspace{10pt}
@@ -645,41 +721,65 @@ Posledním krokem bylo obalit aplikaci wrapperem <ApolloProvider>.
 	</html>
 \end{lstlisting}
 
-\chapter{Headless CMS}
-\label{sec:headlessCMS}
-Pro vývoj své webové aplikace jsem se rozhodla využít Headless CMS, protože je to jednoduchý způsob jak ukládat a spravovat své data na backendu, a to bez nutnosti vytváření vlastního backendu se serverem. Headless CMS umožňuje oddělit správu obsahu (backend) od prezentace obsahu (frontend), což přináší flexibilitu ve výběru frontendových technologií a zjednodušuje celkový vývoj aplikace.
 
-\section{Strapi}
-Původně jsem zvažovala možnost využití Hygraph, [] ale po následné konzultaci s panem učitelem jsme došli k závěru využití Strapi a později dockerizování aplikace.
-
-\section{Strapi GraphQL}
-GraphQL API umožňuje provádět dotazy a mutace pro interakci s typy obsahu prostřednictvím GraphQL pluginu v Strapi. Výsledky lze filtrovat, třídit a stránkovat. Ve své aplikaci jsem využila filtraci a třízení. Plugin měl také k dispozici playground, který jsem hodně využívala na dotazy předtím než jsem je aplikovala v kódu.
+\section{Tailwind CSS}
+Tailwind CSS je populární CSS framework, který poskytuje sadu předdefinovaných utilit a tříd pro stylování webových stránek a aplikací. Díky Tailwind CSS jsem nemusela vytvářet vlastní CSS styl a rovnou do elementů jsem psala styly pomocí 'className'. Vybrala jsem si Tailwind CSS jako svůj framework, protože místo předdefinovaných komponentů či stylů umožňuje pracovat přímo s jednotlivými vlastnostmi stylu a díky tomu jsem si mohla stránku nastylovat přesně podle sebe.
 
 \vspace{10pt}
 
-\begin{lstlisting}[style=JavaScript, title={Kód}, caption={Ukázka mutace v Content.js}] 
- 	const uploadFile = gql`
-	 	mutation ($file: Upload!) {
-	 		upload(file: $file) {
-	 			data {
-	 				id
-	 			}
-	 		}
-	 	}
-	`;
+\begin{lstlisting}[style=JavaScript, title={Kód}, caption={Ukázka useState() v Collapsible.jsx}] 
+	<div
+	className="relative py-1 px-2 w-fit h-full text-white rounded-l-sm"
+	style={{ backgroundColor: tag.Color }}
+	>
+	{tag.Name}
+	</div>
 \end{lstlisting}
 
-\section{Strapi Cloud}
-
 \chapter{Funkce aplikace}
+Aplikace nemá moc funkcí, jelikož jsem začala aplikaci vyvíjet pozdě a za tu dobu mě potkalo hodně komplikací. Jedna z hlavních funkcí která aplikace poskytuje je nahrávání souboru a stahování již nahraných souborů. Poslední funkcí je smazání nahraných souborů.
+
+\section{Přihlášení}
+Přihlášení jsem zajistila pomocí Clerku, které nabízí přihlášení přes Github, Google, Microsoft a e-mail. Clerk má také k dispozici běžné zaregistrování uživatelů.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{image/sign-in.jpg}
+	\caption{Ukázka přihlášení}
+\end{figure}
 
 \section{Nahrávání souboru}
+Pro nahrání souboru uživatel klikne na tlačítko 'přidat soubor'. Vyskočí formulář, kde si vybere výukový soubor společně s kategorii, do které se výukový materiál řadí. Poté stačí potvrdit tlačítkem 'přidat' a soubor se uloží. Uložené soubory se zobrazují společně se štítkem vybrané kategorie. Uživatel vidí pouze své uložené materiály.
+
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{image/upload.jpg} 
+	\caption{Ukázka nahrávaní souboru}
+\end{figure}
+
+\section{Stahování souboru}
+Uživatel si může nahrané soubor jednoduše stáhnout kliknutím na jejich název.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{image/download.jpg} 
+	\caption{Ukázka stahování souboru}
+\end{figure}
 
 \section{Mazání souboru}
+Poslední funkce kterou aplikace umožňuje je mazání souboru. Uživatel jednoduše může mazat své soubory kliknutím na ikonku křížku, která se nachází hned vedle štítku.
 
 \chapter*{Závěr}
+	Cílem projektu bylo vytvořit webovou aplikaci s maturitním obsahem a s možností ukládání výukových materiálů. Backend je řešený pomocí Strapi s GraphQL, Vercel a frontend je řešen využitím React Next.js 13, Apollo Client a Tailwind CSS. Uživatelský systém je zajišťěn pomocí Clerku. Cela databáze běží na Strapi cloud, kde je využíváná zkušební verze na 14dní. 
 	
-	Závěr
+	Myslím si, že základní cíle projektu jsem splnila, i když v aplikaci chybí dost funkcionalit, které jsem plánovala přidat. Kvůli komplikacím, na které jsem narazila při vyvíjení aplikace, se mi bohužel nepodařilo přidat další funkce. Už mi nezbyl čas a potřebovala jsem dokončit hlavní funkce stránky, abych mohla stránku nasadit na Vercel. Do budoucna bych chtěla v aplikaci přidat další funkce a také pořešit responzivitu stránky, aby byla dostupná i pro uživatele na mobilu.
+	
+	Aplikace je zálohována na GitHub adresách: https://github.com/ItzHaru/frontend
+	
+	https://github.com/ItzHaru/stranka (starý repozitář)
+	
+	https://github.com/ItzHaru/backend
+	
 	\renewcommand{\bibname}{Seznam použitých zdrojů}
 	%% literatura
 	\begin{thebibliography}{99}
